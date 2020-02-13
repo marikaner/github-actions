@@ -9,7 +9,7 @@
     "test": "npx jest --coverage",
     "tslint": "npx tslint \"**/*.ts\" -e \"**/node_modules/**\"",
     "tslint:fix": "npm run tslint -- --fix",
-    "ci-audit": "npx npm-audit-ci-wrapper -t=high"
+    "ci-audit": "npx npm-audit-ci-wrapper -t high"
   },
   "author": "",
   "devDependencies": {
