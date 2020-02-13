@@ -10,7 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: build
-      run: npm install
+      run: |
+        npm install
         ls node_modules
     - name: Run a one-line script
       run: echo Hello, world!
