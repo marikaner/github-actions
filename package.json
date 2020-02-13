@@ -1,0 +1,20 @@
+{
+  "name": "TestApp",
+  "version": "1.0.0",
+  "description": "A small app to test github actions",
+  "main": "src/index.ts",
+  "scripts": {
+    "ci-build": "npx tsc"
+  },
+  "author": "",
+  "devDependencies": {
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.4000"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "engines": {
+    "node": ">=11.0.0"
+  }
+}
