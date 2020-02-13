@@ -13,6 +13,8 @@ jobs:
       run: |
         npm install
         ls node_modules
+    - name: test
+      run: ls node_modules
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Run a multiline script
