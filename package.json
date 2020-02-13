@@ -4,7 +4,7 @@
   "description": "A small app to test github actions",
   "main": "src/index.ts",
   "scripts": {
-    "ci-build": "npx tsc",
+    "transpile": "npx tsc",
     "lint": "npm run tslint",
     "test": "npx jest --coverage",
     "tslint": "npx tslint \"**/*.ts\" -e \"**/node_modules/**\"",
