@@ -8,14 +8,17 @@
     "lint": "npm run tslint",
     "test": "npx jest --coverage",
     "tslint": "npx tslint \"**/*.ts\" -e \"**/node_modules/**\"",
-    "tslint:fix": "npm run tslint -- --fix"
+    "tslint:fix": "npm run tslint -- --fix",
+    "ci-audit": "npx npm-audit-ci-wrapper -t=high"
   },
   "author": "",
   "devDependencies": {
     "ts-node": "^8.0.3",
     "ts-jest": "^24.0.2",
     "tslint": "5.20.1",
-    "typescript": "^3.3.4000"
+    "typescript": "^3.3.4000",
+    "npm-audit-ci-wrapper": "^2.4.1",
+    "hot-formula-parser": "3.0.0"
   },
   "dependencies": {
     "@types/jest": "^24.0.25",
