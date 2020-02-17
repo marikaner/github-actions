@@ -1,6 +1,6 @@
 {
-  "name": "TestApp",
-  "version": "1.0.0",
+  "name": "github-actions-playground",
+  "version": "1.0.1",
   "description": "A small app to test github actions",
   "main": "src/index.ts",
   "scripts": {

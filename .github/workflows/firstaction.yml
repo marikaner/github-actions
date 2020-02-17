@@ -21,9 +21,7 @@ jobs:
       run: npm run lint
     - name: ci-audit
       run: npm run ci-audit
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multiline script
+    - name: publish
       run: |
-        echo Add other actions to build
-        echo test, and deploy your project.
+        echo '//registry.npmjs.org/:_authToken=${NPM_PUBLISH_TOKEN}' >> .npmrc
+        npm publish --access public
