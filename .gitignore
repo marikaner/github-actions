@@ -35,3 +35,6 @@ e2e-test/frontend/cypress/results/test-output.xml
 /e2e-test/cypress/videos
 /e2e-test/cypress/results
 /e2e-test/cypress/screenshots
+
+.npmrc
+package-lock.json
