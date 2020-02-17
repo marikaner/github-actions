@@ -1,6 +1,6 @@
 {
   "name": "github-actions-playground",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "A small app to test github actions",
   "scripts": {
     "postinstall": "npx lerna bootstrap --hoist --force-local --strict",
