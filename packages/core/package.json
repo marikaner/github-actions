@@ -1,15 +1,14 @@
 {
-  "name": "github-actions-playground",
+  "name": "github-actions-playground-core",
   "version": "1.0.3",
-  "description": "A small app to test github actions",
+  "description": "A small app to test github actions -- core",
+  "main": "packages/src/index.ts",
   "scripts": {
-    "postinstall": "npx lerna bootstrap --hoist --force-local --strict",
-    "transpile": "npx lerna run transpile",
-    "lint": "npx lerna run lint",
-    "test": "npx lerna run test",
-    "tslint": "npx lerna run tslint",
-    "tslint:fix": "npx lerna run tslint:fix",
-    "ci-audit": "npx npm-audit-ci-wrapper -t high"
+    "transpile": "npx tsc",
+    "lint": "npm run tslint",
+    "test": "npx jest --coverage",
+    "tslint": "npx tslint \"**/*.ts\" -e \"**/node_modules/**\"",
+    "tslint:fix": "npm run tslint -- --fix"
   },
   "author": "",
   "devDependencies": {
