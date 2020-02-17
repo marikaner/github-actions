@@ -3,6 +3,7 @@
   "version": "1.0.3",
   "description": "A small app to test github actions",
   "scripts": {
+    "bootstrap": "npx lerna bootstrap --hoist --force-local --strict",
     "postinstall": "npx lerna bootstrap --hoist --force-local --strict",
     "transpile": "npx lerna run transpile",
     "lint": "npx lerna run lint",
