@@ -1,6 +1,6 @@
 import { getNewResult } from '../src/lotto';
 
-describe('test lotto.ts', () => {
+describe('test lotto.ts ', () => {
     it('test length', async ()  => {
         expect(getNewResult()).toHaveLength(6);
     });
