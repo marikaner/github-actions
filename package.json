@@ -12,7 +12,8 @@
     "tslint:fix": "npx lerna run tslint:fix",
     "ci-audit": "npx npm-audit-ci-wrapper -t high",
     "release-canary": "lerna publish --canary minor --yes",
-    "release": "lerna publish from-package --yes"
+    "release": "lerna publish from-package --yes",
+    "prompt-version:minor": "lerna version minor"
   },
   "author": "junjie",
   "devDependencies": {
