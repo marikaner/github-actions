@@ -17,6 +17,6 @@ jobs:
       - name: Publish a new release to NPM
         run: |
           echo '//registry.npmjs.org/:_authToken=${NPM_PUBLISH_TOKEN}' >> .npmrc
-          npm publish --access public
+          npm run release
         env:
           NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
