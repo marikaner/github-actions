@@ -10,7 +10,7 @@
     "tslint": "npx tslint \"**/*.ts\" -e \"**/node_modules/**\"",
     "tslint:fix": "npm run tslint -- --fix"
   },
-  "author": "Junjie Tang",
+  "author": "Junjie,Tang",
   "devDependencies": {
     "npm-audit-ci-wrapper": "^2.4.1",
     "ts-jest": "^24.0.2",
