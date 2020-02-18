@@ -17,7 +17,7 @@ jobs:
     - name: build
       run: |
         node --version
-        cd packages/core && npm install
+        npm run bootstrap
         ls node_modules
     - name: transpile
       run: npm run transpile
