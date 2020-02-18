@@ -11,9 +11,9 @@ jobs:
     - name: checkout
       uses: actions/checkout@v1
     - name: Use Node 11.9.0
-        uses: actions/setup-node@v1
-        with:
-          node-version: 11.9.0
+      uses: actions/setup-node@v1
+      with:
+        node-version: 11.9.0
     - name: build
       run: |
         node --version
