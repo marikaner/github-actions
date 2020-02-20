@@ -28,7 +28,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    - name: Use Node.js
+    - name: Use Node
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
@@ -39,3 +39,21 @@ jobs:
     - name: License check
       run: npm run check-license
     - run: npm run ci-audit
+  alpha-release:
+    runs-on: ubuntu-latest
+    needs: [tests, checks]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Use Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Install Dependencies
+        run: npm install
+      - name: Publish a new alpha release
+        run: |
+          echo '//registry.npmjs.org/:_authToken=${NPM_PUBLISH_TOKEN}' >> .npmrc
+          npm run release-canary
+        env:
+          NPM_PUBLISH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
