@@ -15,7 +15,7 @@
     "release": "lerna publish from-package --yes",
     "prompt-version:minor": "lerna version minor --yes"
   },
-  "author": "junjie",
+  "author": "me",
   "devDependencies": {
     "ts-node": "^8.0.3",
     "ts-jest": "^24.0.2",
