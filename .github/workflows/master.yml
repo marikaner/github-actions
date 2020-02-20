@@ -46,7 +46,8 @@ jobs:
       - run: npm ci
       - run: git --no-pager diff
       - name: Canary Release
-        run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
-        run: npm run release:canary
+        run: |
+          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
+          npm run release:canary
         env:
           NPM_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
