@@ -1,6 +1,6 @@
 {
   "name": "@marikaner/gap-core",
-  "version": "1.1.1",
+  "version": "1.1.2-pre-alpha.0",
   "description": "A small app to test github actions -- core",
   "main": "packages/src/index.ts",
   "scripts": {
@@ -15,11 +15,11 @@
     "@types/jest": "^24.0.25",
     "jest": "^24.9.0",
     "jest-junit": "^6.4.0",
-    "tslint-eslint-rules": "^5.4.0",
-    "tslint-plugin-blank-line": "0.0.9",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.0.3",
     "tslint": "5.20.1",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-plugin-blank-line": "0.0.9",
     "typescript": "^3.3.4000"
   },
   "engines": {
