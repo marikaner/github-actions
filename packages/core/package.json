@@ -12,19 +12,15 @@
   },
   "author": "me",
   "devDependencies": {
-    "npm-audit-ci-wrapper": "^2.4.1",
+    "@types/jest": "^24.0.25",
+    "jest": "^24.9.0",
+    "jest-junit": "^6.4.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-plugin-blank-line": "0.0.9",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.0.3",
     "tslint": "5.20.1",
     "typescript": "^3.3.4000"
-  },
-  "dependencies": {
-    "@types/jest": "^24.0.25",
-    "express": "^4.16.4",
-    "jest": "^24.9.0",
-    "jest-junit": "^6.4.0",
-    "tslint-eslint-rules": "^5.4.0",
-    "tslint-plugin-blank-line": "0.0.9"
   },
   "engines": {
     "node": ">=11.0.0"
