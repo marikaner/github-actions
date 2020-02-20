@@ -49,6 +49,6 @@ jobs:
       - name: Canary Release
         run: |
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
-          npm run release:canary
+          npx lerna publish prerelease --dist-tag canary --preid pre-alpha
         env:
           NPM_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
