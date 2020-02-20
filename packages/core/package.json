@@ -1,5 +1,5 @@
 {
-  "name": "github-actions-playground-core",
+  "name": "@marikaner/gap-core",
   "version": "1.5.0",
   "description": "A small app to test github actions -- core",
   "main": "packages/src/index.ts",

@@ -1,5 +1,5 @@
 {
-  "name": "github-actions-playground",
+  "name": "@marikaner/gap",
   "description": "A small app to test github actions",
   "scripts": {
     "bootstrap": "npx lerna bootstrap --hoist --force-local --strict",
