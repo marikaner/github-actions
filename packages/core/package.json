@@ -1,6 +1,6 @@
 {
   "name": "@marikaner/gap-core",
-  "version": "1.1.2-pre-alpha.0",
+  "version": "1.1.1",
   "description": "A small app to test github actions -- core",
   "main": "packages/src/index.ts",
   "scripts": {
