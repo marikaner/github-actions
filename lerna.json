@@ -2,6 +2,5 @@
   "packages": [
     "packages/core"
   ],
-  "version": "0.0.1",
-  "ignoreChanges": [ ".npmrc" ]
+  "version": "0.0.1"
 }
