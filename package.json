@@ -9,7 +9,7 @@
     "test": "npx lerna run test",
     "tslint": "npx lerna run tslint",
     "tslint:fix": "npx lerna run tslint:fix",
-    "ci-audit": "npx npm-audit-ci-wrapper -t high",
+    "ci-audit": "npx audit-ci -m",
     "check-license": "npx license-checker --onlyAllow MIT\\;Apache\\;ISC\\;BSD\\;WTFPL\\;Artistic\\;CC-BY\\;CC0\\;Unlicense",
     "release-canary": "lerna publish --canary minor --yes",
     "release": "lerna publish from-package --yes",
@@ -17,13 +17,14 @@
   },
   "author": "me",
   "devDependencies": {
-    "ts-node": "^8.0.3",
-    "ts-jest": "^24.0.2",
-    "tslint": "5.20.1",
-    "typescript": "^3.3.4000",
-    "npm-audit-ci-wrapper": "^2.4.1",
+    "audit-ci": "^2.5.1",
     "lerna": "^3.16.4",
-    "license-checker": "^25.0.1"
+    "license-checker": "^25.0.1",
+    "npm-audit-ci-wrapper": "^2.4.1",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.0.3",
+    "tslint": "5.20.1",
+    "typescript": "^3.3.4000"
   },
   "dependencies": {
     "@types/jest": "^24.0.25",

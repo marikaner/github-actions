@@ -31,7 +31,7 @@ jobs:
     - run: npm ci
     - run: npm run lint
     - run: npm run check-license
-    - run: npm run audit
+    - run: npm audit
 
   alpha-release:
     if: github.event_name != 'pull_request'
