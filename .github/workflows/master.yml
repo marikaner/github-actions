@@ -1,6 +1,7 @@
 name: Master
 
 on:
+  pull_request: ~
   push:
     branches:
     - master
@@ -40,6 +41,7 @@ jobs:
       run: npm run check-license
     - run: npm run ci-audit
   alpha-release:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     needs: [tests, checks]
     steps:
