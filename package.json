@@ -1,6 +1,5 @@
 {
   "name": "github-actions-playground",
-  "version": "1.3.0",
   "description": "A small app to test github actions",
   "scripts": {
     "bootstrap": "npx lerna bootstrap --hoist --force-local --strict",
@@ -11,6 +10,7 @@
     "tslint": "npx lerna run tslint",
     "tslint:fix": "npx lerna run tslint:fix",
     "ci-audit": "npx npm-audit-ci-wrapper -t high",
+    "check-license": "npx license-checker --onlyAllow MIT\\;Apache\\;ISC\\;BSD\\;WTFPL\\;Artistic\\;CC-BY\\;CC0\\;Unlicense",
     "release-canary": "lerna publish --canary minor --yes",
     "release": "lerna publish from-package --yes",
     "prompt-version:minor": "lerna version minor --yes"
@@ -22,7 +22,8 @@
     "tslint": "5.20.1",
     "typescript": "^3.3.4000",
     "npm-audit-ci-wrapper": "^2.4.1",
-    "lerna": "^3.16.4"
+    "lerna": "^3.16.4",
+    "license-checker": "^25.0.1"
   },
   "dependencies": {
     "@types/jest": "^24.0.25",

@@ -26,6 +26,8 @@ jobs:
       run: npm run test
     - name: Lint
       run: npm run lint
+    - name: License check
+      run: npm run check-license
     - name: CI audit
       run: npm run ci-audit
     - name: Publish canary
