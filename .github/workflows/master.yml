@@ -7,14 +7,15 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+        node-version: [10.x, 12.x]
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    - name: Use Node 11.9.0
-      uses: actions/setup-node@v1
-      with:
-        node-version: 11.9.0
     - name: Build
       run: |
         node --version
