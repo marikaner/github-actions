@@ -10,7 +10,7 @@
     "tslint": "npx lerna run tslint",
     "tslint:fix": "npx lerna run tslint:fix",
     "ci-audit": "npx npm-audit-ci-wrapper -t high",
-    "check-license": "npx license-checker --onlyAllow MIT\\;Apache\\;ISC\\;BSD\\;WTFPL\\;Artistic\\;CC-BY\\;CC0\\;Unlicense",
+    "check-license": "npx license-checker --onlyAllow MIT\\;Apache",
     "release-canary": "lerna publish --canary minor --yes",
     "release": "lerna publish from-package --yes",
     "prompt-version:minor": "lerna version minor --yes"
