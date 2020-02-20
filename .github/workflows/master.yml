@@ -43,6 +43,7 @@ jobs:
         with:
           node-version: '12.x'
       - run: npm ci
+      - run: git --no-pager diff
       - run: npm run release:canary
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
