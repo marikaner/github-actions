@@ -11,7 +11,7 @@
     "tslint:fix": "npx lerna run tslint:fix",
     "ci-audit": "npx audit-ci -m",
     "check-license": "npx license-checker --onlyAllow MIT\\;Apache\\;ISC\\;BSD\\;WTFPL\\;Artistic\\;CC-BY\\;CC0\\;Unlicense",
-    "release:canary": "lerna publish premajor --canary --no-verify-access --yes",
+    "release:canary": "lerna publish premajor --canary --no-verify-access --no-git-tag-version --yes",
     "release": "lerna publish from-package --yes",
     "prompt-version:minor": "lerna version minor --yes"
   },
