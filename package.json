@@ -11,7 +11,7 @@
     "tslint:fix": "npx lerna run tslint:fix",
     "ci-audit": "npx audit-ci -m",
     "check-license": "npx license-checker --onlyAllow MIT\\;Apache\\;ISC\\;BSD\\;WTFPL\\;Artistic\\;CC-BY\\;CC0\\;Unlicense",
-    "release-canary": "lerna publish --canary minor --yes",
+    "release-canary": "lerna publish from-package --canary --yes",
     "release": "lerna publish from-package --yes",
     "prompt-version:minor": "lerna version minor --yes"
   },
@@ -20,7 +20,6 @@
     "audit-ci": "^2.5.1",
     "lerna": "^3.16.4",
     "license-checker": "^25.0.1",
-    "npm-audit-ci-wrapper": "^2.4.1",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.0.3",
     "tslint": "5.20.1",
