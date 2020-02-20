@@ -45,7 +45,7 @@ jobs:
       - run: npm ci
       - name: Publish new alpha release
         run: |
-          echo '//registry.npmjs.org/:_authToken=${NPMJS_ACCESS_TOKEN}' >> .npmrc
+          echo '//registry.npmjs.org/:_authToken=${NPM_PUBLISH_TOKEN}' >> .npmrc
           npm run release-canary
         env:
           NPM_PUBLISH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
