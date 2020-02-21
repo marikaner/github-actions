@@ -32,7 +32,7 @@ jobs:
     - run: npm run lint
       name: Static Code Check
     - run: npx license-checker
-    - run: npx license-checker --onlyAllow "MIT;Apache;ISC;WTFPL;Artistic;CC-BY;CC0;Unlicense"
+    - run: npx license-checker --onlyAllow "MIT;Apache;ISC;BSD;WTFPL;Artistic;CC-BY;CC0;Unlicense"
       name: License Check
     - run: npm audit-ci -m
       name: Dependency Vulnerability Check
