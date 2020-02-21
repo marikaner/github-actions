@@ -49,8 +49,7 @@ jobs:
       - name: Canary Release
         run: |
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
-          npx lerna publish patch -y
-        #npx lerna publish --canary -y
+        npx lerna publish --canary -y
         #npx lerna publish prerelease -y --force-publish=* --no-push --no-git-tag-version --dist-tag nextg
 
         env:
