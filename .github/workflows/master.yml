@@ -51,6 +51,7 @@ jobs:
       - name: Canary Release
         run: |
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
+          git status
           npx lerna publish --canary -y
 
         env:
