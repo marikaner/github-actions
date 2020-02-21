@@ -51,7 +51,7 @@ jobs:
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
           npx lerna publish 1.1.2 -y --force-publish=*
         #npx lerna publish --canary -y
-        #npx lerna publish prerelease -y --force-publish=* --no-push --no-git-tag-version --dist-tag next
+        #npx lerna publish prerelease -y --force-publish=* --no-push --no-git-tag-version --dist-tag nextg
 
         env:
           NPM_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
