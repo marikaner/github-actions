@@ -67,9 +67,9 @@ jobs:
         with:
           node-version: '12.x'
       - run: npm ci
-    - name: Release
-      run: |
-        echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
-        npx lerna publish --force-publish -y
-      env:
-        NPM_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
+      - name: Release
+        run: |
+          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
+          npx lerna publish --force-publish -y
+        env:
+          NPM_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
