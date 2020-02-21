@@ -1,5 +1,5 @@
 {
-  "name": "@marikaner/gap2-core",
+  "name": "@marikaner/gap3-core",
   "version": "1.17.3",
   "description": "A small app to test github actions -- core",
   "publishConfig": {

@@ -1,5 +1,5 @@
 {
-  "name": "@marikaner/gap2",
+  "name": "@marikaner/gap3",
   "description": "A small app to test github actions",
   "scripts": {
     "bootstrap": "npx lerna bootstrap --hoist --force-local --strict",
