@@ -34,7 +34,7 @@ jobs:
     - run: npx license-checker
     - run: npx license-checker --onlyAllow "MIT;Apache;ISC;BSD;WTFPL;Artistic;CC-BY;CC0;Unlicense"
       name: License Check
-    - run: npm audit-ci -m
+    - run: npx audit-ci -m
       name: Dependency Vulnerability Check
 
   canary-release:
