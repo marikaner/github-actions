@@ -3,7 +3,7 @@ main();
 
 function main() {
     // console.info('starting');
-    // console.info(getNewResult());c
+    // console.info(getNewResult());
 }
 
 export function getNewResult(): number[] {
