@@ -7,54 +7,50 @@ on:
     - master
 
 jobs:
-  # tests:
-  #   runs-on: ${{ matrix.os }}
-  #   strategy:
-  #     matrix:
-  #       # os: [macos-latest, windows-latest, ubuntu-latest]
-  #       os: [ubuntu-latest]
-  #       node-version: [10.x, 12.x]
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #   - uses: actions/setup-node@v1
-  #     with:
-  #       node-version: ${{ matrix.node-version }}
-  #   - run: npm ci
-  #   - run: npm run test
+  tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [ubuntu-latest]
+        node-version: [10.x, 12.x]
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run test
 
-  # checks:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #   - uses: actions/setup-node@v1
-  #     with:
-  #       node-version: '12.x'
-  #   - run: npm ci
-  #   - run: npm run lint
-  #   - run: npm run check-license
-  #   - run: npm audit
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - run: npm ci
+    - run: npm run lint
+      name: Static Code Check
+    - run: npm run check-license
+      name: License Check
+    - run: npm audit-ci -m
+      name: Dependency Vulnerability Check
 
-  alpha-release:
+  canary-release:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
-    # needs: [tests, checks]
+    needs: [tests, checks]
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - run: git --no-pager diff
       - run: npm ci
-      - run: git --no-pager diff
-      - run: git describe --always --long --dirty --match 'v*.*.*' --first-parent
-      - run: git describe --always --long --dirty --match 'v*.*.*'
-      - run: git describe --always --long --match 'v*.*.*'
-      - run: git describe --always --long
       - name: Canary Release
         run: |
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
-          npx lerna publish --force-publish --canary -y
-        #npx lerna publish prerelease -y --force-publish=* --no-push --no-git-tag-version --dist-tag nextg
+          npx lerna publish --canary -y
 
         env:
           NPM_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
