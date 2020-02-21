@@ -46,6 +46,7 @@ jobs:
       - run: git --no-pager diff
       - run: npm ci
       - run: git --no-pager diff
+      - run: git describe --always --long --dirty --match v*.*.*
       - name: Canary Release
         run: |
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
