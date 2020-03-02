@@ -1,6 +1,6 @@
 {
   "name": "@marikaner/gap3-core",
-  "version": "1.17.8",
+  "version": "1.17.9",
   "description": "A small app to test github actions -- core",
   "publishConfig": {
     "access": "public"
