@@ -2,5 +2,5 @@
   "packages": [
     "packages/core"
   ],
-  "version": "1.17.15"
+  "version": "1.17.16-rc.0"
 }
