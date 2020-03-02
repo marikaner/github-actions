@@ -59,4 +59,20 @@ jobs:
 
         env:
           NPM_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
+  release:
+    if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - run: npm ci
+      - name: Release
+        run: |
+          git update-index --assume-unchanged .npmrc
+          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
+          npx lerna publish from-package -y
+        env:
+          NPM_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
 
