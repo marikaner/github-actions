@@ -10,16 +10,16 @@ on:
 jobs:
   tests:
     # if: startsWith(github.ref, 'v')
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
-        node-version: [10.x, 12.x]
+    runs-on: ubuntu-latest
+    # strategy:
+    #   matrix:
+    #     os: [macos-latest, windows-latest, ubuntu-latest]
+    #     node-version: [10.x, 12.x]
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 12.x
     - run: npm ci
     - run: echo ${{ github.ref }}
     - run: echo ${{ github.event }}
