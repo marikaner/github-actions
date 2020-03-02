@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: '12.x'
       - run: npm ci
-      - name: Canary Release
+      - name: Release
         run: |
           git update-index --assume-unchanged .npmrc
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
