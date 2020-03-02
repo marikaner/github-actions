@@ -23,7 +23,7 @@ jobs:
     - run: npm ci
     - run: echo ${{ github.ref }}
     - run: echo ${{ github.event }}
-    - run: npm run fest
+    - run: npm run test
 
   # checks:
   #   runs-on: ubuntu-latest
