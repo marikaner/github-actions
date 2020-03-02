@@ -3,8 +3,10 @@ name: build
 on:
   pull_request: ~
   push:
-    branches:
-    - master
+    branches: [master]
+  release:
+    types: [created]
+
 
 jobs:
   # tests:
