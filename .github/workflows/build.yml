@@ -53,11 +53,19 @@ jobs:
       - run: npm ci
       - run: git status
       - name: Canary Release
+        if: startsWith(github.ref, 'refs/tags/v') != true
         run: |
           git update-index --assume-unchanged .npmrc
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
           git status
           npx lerna publish --canary -y
+      - name: Canary Release for new version
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          git update-index --assume-unchanged .npmrc
+          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
+          git status
+          npx lerna publish force-publish --canary -y
 
         env:
           NPM_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
