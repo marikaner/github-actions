@@ -1,6 +1,7 @@
 {
   "packages": [
-    "packages/core"
+    "packages/core",
+    "packages/vdm"
   ],
   "version": "independent"
 }
