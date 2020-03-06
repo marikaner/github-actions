@@ -22,10 +22,10 @@
     "license-checker": "^25.0.1",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.0.3",
+    "tslint": "5.20.1",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-plugin-blank-line": "0.0.9",
-    "tslint": "5.20.1",
-    "typescript": "^3.3.4000"
+    "typescript": "^3.8.3"
   },
   "engines": {
     "node": ">=11.0.0"
