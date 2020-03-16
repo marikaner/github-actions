@@ -3,5 +3,5 @@
     "packages/core",
     "packages/vdm"
   ],
-  "version": "independent"
+  "version": "1.17.26"
 }

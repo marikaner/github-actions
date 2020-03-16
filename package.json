@@ -29,5 +29,9 @@
   },
   "engines": {
     "node": ">=11.0.0"
+  },
+  "dependencies": {
+    "@marikaner/gap-vdm": "file:packages/vdm",
+    "@marikaner/gap3-core": "file:packages/core"
   }
 }

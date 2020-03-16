@@ -14,17 +14,6 @@
     "tslint:fix": "npm run tslint -- --fix"
   },
   "author": "me",
-  "devDependencies": {
-    "@types/jest": "^24.0.25",
-    "jest": "^24.9.0",
-    "jest-junit": "^6.4.0",
-    "ts-jest": "^24.0.2",
-    "ts-node": "^8.0.3",
-    "tslint": "5.20.1",
-    "tslint-eslint-rules": "^5.4.0",
-    "tslint-plugin-blank-line": "0.0.9",
-    "typescript": "^3.3.4000"
-  },
   "engines": {
     "node": ">=11.0.0"
   }
