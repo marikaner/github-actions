@@ -1,6 +1,6 @@
 {
   "name": "@marikaner/gap-vdm",
-  "version": "1.17.25",
+  "version": "1.18.0",
   "homepage": "https://github.com/marikaner/github-actions",
   "license": "ISC",
   "publishConfig": {
@@ -11,7 +11,7 @@
     "url": "git+https://marikaner@github.com/marikaner/github-actions.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 0"
   },
   "dependencies": {
     "@marikaner/gap3-core": "file:../core"
