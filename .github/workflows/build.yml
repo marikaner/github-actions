@@ -23,7 +23,8 @@ jobs:
     - run: npm ci
     - run: echo ${{ github.ref }}
     - run: echo ${{ github.event }}
-    - run: echo ::set-output name=mmm::${{ node test.js }}
+    - run: echo 
+    - run: echo "##[set-output name=mmm;]$(node test.js)"
       id: fruit
     - run: echo ${{ steps.fruit.outputs.mmm }}
     - run: npm run test
