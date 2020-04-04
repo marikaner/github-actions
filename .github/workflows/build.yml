@@ -91,5 +91,5 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
           draft: true
-          body: ${{ steps.cl.outputs.changelog }}
+          body: ${{ steps.fruit.outputs.mmm }}
 
