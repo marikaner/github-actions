@@ -82,7 +82,7 @@ jobs:
       - run: echo "##[set-output name=mmm;]$(node test.js)"
         id: fruit
       - run: echo ${{ steps.fruit.outputs.mmm }}
-      - uses: ./.github/actions/my-action
+      - uses: ./.github/actions/get-changelog
         id: cl
       - uses: actions/create-release@latest
         env:
