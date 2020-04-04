@@ -1,5 +1,5 @@
 const core = require('@actions/core');
-const getChangelog = require('../../../test');
+const { getChangelog } = require('../../../test');
 
 try {
   core.setOutput("changelog", getChangelog());
