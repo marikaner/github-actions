@@ -76,12 +76,6 @@ jobs:
     needs: [tests]
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-      - run: echo "##[set-output name=mmm;]$(node test.js)"
-        id: fruit
-      - run: echo ${{ steps.fruit.outputs.mmm }}
       - uses: ./.github/actions/get-changelog
         id: cl
       - uses: actions/create-release@latest
@@ -91,5 +85,5 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
           draft: true
-          body: ${{ steps.fruit.outputs.mmm }}
+          body: ${{ steps.cl.outputs.changelog }}
 
