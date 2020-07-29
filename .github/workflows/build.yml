@@ -56,8 +56,8 @@ jobs:
       - name: Canary Release
         if: startsWith(github.ref, 'refs/tags/v') != true
         run: |
-          git update-index --assume-unchanged .yarnrc
-          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .yarnrc
+          git update-index --assume-unchanged .yarnrc.yml
+          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .yarnrc.yml
           git status
           npx lerna publish --canary -y
         env:
