@@ -3,7 +3,6 @@
   "description": "A small app to test github actions",
   "scripts": {
     "bootstrap": "npx lerna bootstrap --hoist --force-local --strict",
-    "postinstall": "npx lerna bootstrap --hoist --force-local --strict",
     "transpile": "npx lerna run transpile",
     "lint": "npx lerna run lint",
     "test": "npx lerna run test",
@@ -11,6 +10,10 @@
     "tslint:fix": "npx lerna run tslint:fix",
     "prompt-version:minor": "lerna version minor --yes"
   },
+  "workspaces": [
+    "packages/core",
+    "packages/vdm"
+  ],
   "author": "me",
   "devDependencies": {
     "@types/jest": "^24.0.25",
