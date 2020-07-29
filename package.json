@@ -10,6 +10,7 @@
     "tslint:fix": "npx lerna run tslint:fix",
     "prompt-version:minor": "lerna version minor --yes"
   },
+  "private": true,
   "workspaces": [
     "packages/core",
     "packages/vdm"
