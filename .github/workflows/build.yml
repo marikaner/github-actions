@@ -57,17 +57,9 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v') != true
         run: |
           git update-index --assume-unchanged .npmrc
-          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
+          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .yarnrc
           git status
           npx lerna publish --canary -y
-      - name: Canary Release for new version
-        if: startsWith(github.ref, 'refs/tags/v')
-        run: |
-          git update-index --assume-unchanged .npmrc
-          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
-          git status
-          npx lerna publish --canary --force-publish -y
-
         env:
           NPM_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
   draft-github-release:
@@ -76,6 +68,7 @@ jobs:
     needs: [tests]
     steps:
       - uses: actions/checkout@v1
+
       - uses: ./.github/actions/get-changelog
         id: cl
       - uses: actions/create-release@latest

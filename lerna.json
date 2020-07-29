@@ -1,7 +1,5 @@
 {
-  "packages": [
-    "packages/core",
-    "packages/vdm"
-  ],
+  "npmClient": "yarn",
+  "useWorkspaces": true,
   "version": "1.18.18"
 }
