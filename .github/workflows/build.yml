@@ -56,10 +56,10 @@ jobs:
       - name: Canary Release
         if: startsWith(github.ref, 'refs/tags/v') != true
         run: |
-          git update-index --assume-unchanged .yarnrc.yml
-          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .yarnrc.yml
+          git update-index --assume-unchanged .npmrc
+          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
           git status
-          yarn lerna publish --canary --no-push --no-git-tag-version --dist-tag canary --force-publish --preid `git rev-parse --short HEAD` --registry 'https://registry.npmjs.org' --legacy-auth ${NPM_TOKEN} -y
+          yarn lerna publish --canary --no-push --no-git-tag-version --dist-tag canary --force-publish --preid `git rev-parse --short HEAD` -y
         env:
           NPM_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
   draft-github-release:
