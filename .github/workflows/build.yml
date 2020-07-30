@@ -57,7 +57,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v') != true
         run: |
           git update-index --assume-unchanged .yarnrc
-          echo '//registry.npmjs.org/:_authToken "${NPM_TOKEN}"' >> .yarnrc
+          echo '"_authToken" "${NPM_TOKEN}"' >> .yarnrc
           git status
           yarn lerna publish --canary --no-push --no-git-tag-version --dist-tag canary --force-publish --preid `git rev-parse --short HEAD` -y
         env:
