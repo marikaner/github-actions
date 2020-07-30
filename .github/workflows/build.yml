@@ -59,7 +59,7 @@ jobs:
           git update-index --assume-unchanged .yarnrc.yml
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .yarnrc.yml
           git status
-          yarn lerna publish --canary --no-push --no-git-tag-version --dist-tag canary --force-publish --preid `git rev-parse --short HEAD` -y
+          yarn lerna publish --canary --no-push --no-git-tag-version --dist-tag canary --force-publish --preid 1 -y
         env:
           NPM_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
   draft-github-release:
