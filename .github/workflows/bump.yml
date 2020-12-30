@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       bump:
-        description: 'Version bump to be used. Can either be `patch` or `minor`.'
+        description: Version bump to be used. Can either be 'patch' or 'minor'.
         required: false
         default: 'patch'
 
